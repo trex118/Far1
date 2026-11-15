@@ -1,1 +1,6 @@
-
+{
+  "name": "farkian",
+  "assets": {
+    "directory": "./public"
+  }
+}
