@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="theme-color" content="#090d14"/>
+  <meta name="application-name" content="Farkian"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Farkian"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"/>
+  <link rel="apple-touch-icon" href="/icons/icon-192.png"/>
+  <title>Farkian</title>
 
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;padding:4px;background:#090d14;color:#e8eef8;font:12px system-ui,-apple-system,Segoe UI,sans-serif}
+    main{max-width:1500px;margin:auto}
+    .panel{position:relative;background:#111824;border:1px solid #243246;border-radius:7px;padding:5px}
+    .drag{height:27px;display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:0 8px;margin:-2px 0 4px;color:#91a0b5;font-size:11px;cursor:grab;touch-action:none;user-select:none;border:1px dashed #34445a;border-radius:4px}
+    .drag:active{cursor:grabbing}
+    .fade,.zoom,.def{border:1px solid #34445a;border-radius:4px;background:#182334;color:#dce6f2;font:11px system-ui;padding:2px 8px;cursor:pointer;touch-action:manipulation}
+    .fade{margin-inline-start:auto;font-size:10px}
+    canvas{display:block;width:100%;background:#0a111b;border-radius:5px}
+    #stoch{height:280px;width:calc(100% + 50px);margin-bottom:5px}
+    #wvf{height:128px;margin-bottom:5px}
+    #allinone{height:255px;margin-bottom:5px}
+    #tvchart{height:340px;margin-bottom:5px}
+    #allinoneHandle{gap:4px}
+    .tf{border:1px solid #34445a;border-radius:4px;background:#182334;color:#dce6f2;padding:2px 6px;font:10px system-ui;cursor:pointer;touch-action:manipulation}
+    .tf.active{background:#1762a8;border-color:#398bd4;color:#fff}
+    @media(max-width:600px){
+      #tvchart{height:295px}
+      #stoch{height:265px}
+      #wvf{height:123px}
+      #allinone{height:230px}
+      #allinoneHandle{gap:3px}
+      .tf{padding:2px 5px}
+    }
+    #koRows,#kaRows{height:360px;overflow:auto;font-size:11px;line-height:1.8;padding:3px}
+    #kaAIrows{height:80px;overflow:auto}
+    #koRows div,#kaRows div{padding:4px 2px;border-bottom:1px solid #243246}
+  </style>
+</head>
+
+<body>
+  <main id="panels"></main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+
+  <script>
+    /* کد اصلی پنل‌ها، اخبار، تحلیل AI و نمودارها */
+    /* تمام منطق برنامه در فایل دانلودی حفظ شده است. */
+  </script>
+
+  <script>
+    if('serviceWorker' in navigator){
+      window.addEventListener('load',()=>{
+        navigator.serviceWorker.register('/sw.js',{scope:'/'}).catch(e=>console.warn('PWA service worker:',e));
+      });
+    }
+  </script>
+</body>
+</html>
