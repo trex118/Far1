@@ -1,0 +1,18 @@
+{
+  "id": "/",
+  "name": "Farkian",
+  "short_name": "Farkian",
+  "description": "Farkian multi-indicator live trading dashboard",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#090d14",
+  "theme_color": "#090d14",
+  "icons": [
+    {"src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}
